@@ -34,6 +34,22 @@
     }
   }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    // Array of image URLs
+    var images = ["hero1.jpg", "hero2.jpg"];
+    var currentIndex = 0;
+  
+    // Function to change the background image
+    function changeImage() {
+      document.querySelector('.hero-img').src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+  
+    // Change image every 1 second
+    setInterval(changeImage, 1000);
+  });
+  
+
   /**
    * Easy on scroll event listener 
    */
